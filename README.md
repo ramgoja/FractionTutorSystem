@@ -26,5 +26,3 @@ The system uses an **OWL ontology** to represent domain knowledge and is impleme
 - **HTML / CSS** (Frontend)
 
 ---
-
-## Project Structure
