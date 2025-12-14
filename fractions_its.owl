@@ -1,0 +1,2430 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/fractions_tutor#"
+     xml:base="http://www.semanticweb.org/fractions_tutor"
+     xmlns:ft="http://www.semanticweb.org/fractions_tutor#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/fractions_tutor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#about -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#about">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hasDenominator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hasDenominator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hasHint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hasHint">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hasNumerator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hasNumerator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hasSimplifiedForm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hasSimplifiedForm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hasSkillLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hasSkillLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/fractions_tutor#SkillLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#expectedDenominator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fractions_tutor#expectedDenominator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#expectedNumerator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fractions_tutor#expectedNumerator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#hintText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fractions_tutor#hintText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#numericalValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fractions_tutor#numericalValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#promptText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/fractions_tutor#promptText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Denominator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Exercise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Fraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Hint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#Hint"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Numerator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SimplifiedFraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SkillLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/fractions_tutor#SkillLevel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Advanced -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Advanced">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SkillLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Beginner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Beginner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SkillLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Den_98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Den_98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Denominator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_10_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_10_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_10_25"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_BothParts"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 10/25</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_10_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_10_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_10_30"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 10/30</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_12_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_12_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_12_16"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 12/16</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_12_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_12_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_12_18"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 12/18</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_12_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_12_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_12_20"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 12/20</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_12_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_12_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_12_36"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 12/36</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_12_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_12_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_12_44"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 12/44</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_14_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_14_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_14_21"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 14/21</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_14_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_14_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_14_28"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 14/28</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_14_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_14_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_14_35"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 14/35</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_15_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_15_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_15_25"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 15/25</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_15_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_15_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_15_35"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 15/35</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_16_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_16_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_16_20"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 16/20</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_16_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_16_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_16_24"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 16/24</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_16_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_16_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_16_40"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 16/40</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_16_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_16_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_16_56"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 16/56</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_18_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_18_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_18_24"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 18/24</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_18_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_18_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_18_27"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 18/27</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_18_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_18_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_18_30"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 18/30</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_20_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_20_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_20_30"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 20/30</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_21_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_21_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_21_28"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 21/28</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_21_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_21_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_21_49"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 21/49</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_22_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_22_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_22_33"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 22/33</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_22_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_22_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_22_66"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 22/66</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_24_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_24_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_24_36"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 24/36</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_24_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_24_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_24_84"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 24/84</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_25_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_25_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_25_35"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 25/35</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_25_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_25_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_25_45"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 25/45</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_27_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_27_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_27_45"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 27/45</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_27_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_27_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_27_63"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 27/63</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_27_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_27_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_27_72"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 27/72</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_28_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_28_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_28_32"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 28/32</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_28_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_28_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_28_42"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 28/42</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_32_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_32_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_32_48"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 32/48</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_32_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_32_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_32_56"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 32/56</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_33_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_33_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_33_44"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 33/44</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_35_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_35_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_35_49"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 35/49</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_35_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_35_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_35_55"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 35/55</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_36_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_36_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_36_90"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 36/90</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_39_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_39_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_39_65"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 39/65</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_42_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_42_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_42_56"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 42/56</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_42_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_42_70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_42_70"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 42/70</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_44_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_44_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_44_66"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 44/66</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_45_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_45_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_45_60"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 45/60</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_45_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_45_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_45_75"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 45/75</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_48_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_48_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_48_72"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 48/72</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_48_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_48_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_48_80"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 48/80</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_4_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_4_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_4_8"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_BothParts"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 4/8</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_50_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_50_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_50_60"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Five"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 50/60</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_54_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_54_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_54_81"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 54/81</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_56_98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_56_98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_56_98"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 56/98</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_5_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_5_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_5_20"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 5/20</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_63_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_63_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_63_84"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Advanced"/>
+        <promptText>Simplify 63/84</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_6_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_6_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_6_12"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 6/12</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_6_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_6_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_6_9"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_BothParts"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 6/9</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_8_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_8_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_8_12"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 8/12</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_8_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_8_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_8_20"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_Even"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 8/20</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_9_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_9_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_9_12"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Intermediate"/>
+        <promptText>Simplify 9/12</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_9_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_9_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_9_15"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 9/15</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Ex_9_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Ex_9_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Exercise"/>
+        <about rdf:resource="http://www.semanticweb.org/fractions_tutor#Frac_9_21"/>
+        <hasHint rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor"/>
+        <hasSkillLevel rdf:resource="http://www.semanticweb.org/fractions_tutor#Beginner"/>
+        <promptText>Simplify 9/21</promptText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_10_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_10_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_25"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_10"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_10_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_10_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_30"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_10"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_12_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_12_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_16"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_12"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_12_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_12_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_18"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_12"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_12_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_12_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_20"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_12"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_12_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_12_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_36"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_12"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_12_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_12_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_44"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_12"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_11"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_14_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_14_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_21"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_14"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_14_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_14_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_28"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_14"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_14_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_14_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_35"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_14"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_15_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_15_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_25"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_15"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_15_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_15_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_35"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_15"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_16_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_16_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_20"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_16"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_4_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_16_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_16_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_24"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_16"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_16_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_16_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_40"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_16"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_16_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_16_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_56"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_16"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_18_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_18_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_24"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_18"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_18_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_18_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_27"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_18"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_18_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_18_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_30"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_18"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_20_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_20_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_30"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_20"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_21_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_21_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_28"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_21"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_21_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_21_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_49"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_21"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_22_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_22_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_33"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_22"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_22_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_22_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_66"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_22"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_24_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_24_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_36"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_24"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_24_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_24_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_84"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_24"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_25_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_25_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_35"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_25"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_5_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_25_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_25_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_45"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_25"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_5_9"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_27_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_27_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_45"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_27"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_27_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_27_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_63"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_27"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_27_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_27_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_72"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_27"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_28_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_28_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_32"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_28"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_7_8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_28_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_28_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_42"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_28"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_32_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_32_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_48"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_32"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_32_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_32_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_56"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_32"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_4_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_33_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_33_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_44"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_33"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_35_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_35_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_49"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_35"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_5_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_35_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_35_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_55"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_35"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_5_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_36_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_36_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_90"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_36"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_39_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_39_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_65"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_39"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_42_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_42_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_56"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_42"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_42_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_42_70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_70"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_42"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_44_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_44_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_66"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_44"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_45_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_45_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_60"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_45"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_45_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_45_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_75"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_45"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_48_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_48_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_72"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_48"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_48_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_48_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_80"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_48"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_4_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_4_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_8"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_4"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_50_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_50_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_60"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_50"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_5_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_54_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_54_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_81"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_54"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_56_98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_56_98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_98"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_56"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_4_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_5_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_5_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_20"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_5"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_63_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_63_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_84"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_63"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_6_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_6_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_12"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_6"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_1_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_6_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_6_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_9"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_6"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_8_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_8_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_12"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_8"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_8_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_8_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_20"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_8"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_2_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_9_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_9_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_12"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_9"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_9_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_9_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_15"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_9"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Frac_9_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Frac_9_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Fraction"/>
+        <hasDenominator rdf:resource="http://www.semanticweb.org/fractions_tutor#Den_21"/>
+        <hasNumerator rdf:resource="http://www.semanticweb.org/fractions_tutor#Num_9"/>
+        <hasSimplifiedForm rdf:resource="http://www.semanticweb.org/fractions_tutor#SFrac_3_7"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Hint_BothParts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Hint_BothParts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+        <hintText>Always divide both parts by the same number to keep the value the same.</hintText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Hint_CommonFactor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+        <hintText>Look for the greatest common factor (GCF). Try 2, 3, 5, or 7 first.</hintText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Hint_Even -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Hint_Even">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+        <hintText>Both numbers are even — start by dividing by 2.</hintText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Hint_Five -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Hint_Five">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Hint"/>
+        <hintText>If a number ends in 0 or 5, 5 is a good factor to try.</hintText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Intermediate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Intermediate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SkillLevel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#Num_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#Num_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#Numerator"/>
+        <numericalValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</numericalValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_1_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_1_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_1_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_1_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_1_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_1_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_2_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_2_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_2_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_2_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_2_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_2_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_3_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_3_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_3_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_3_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_3_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_3_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_3_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_3_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_3_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_3_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_4_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_4_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_4_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_4_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_5_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_5_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_5_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_5_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_5_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_5_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</expectedNumerator>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/fractions_tutor#SFrac_7_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/fractions_tutor#SFrac_7_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/fractions_tutor#SimplifiedFraction"/>
+        <expectedDenominator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</expectedDenominator>
+        <expectedNumerator rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</expectedNumerator>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

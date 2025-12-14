@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fractions Simplification Tutor</title>
+
+    <style>
+      :root{
+        --bg:#0f172a; --panel:#0b1227; --card:#0b1430;
+        --muted:#97a3b6; --text:#e6ebf4;
+        --accent:#6ee7b7; --accent2:#22d3ee;
+        --danger:#ef4444; --ok:#34d399;
+        --shadow:0 12px 32px rgba(0,0,0,.35);
+        --radius:18px;
+      }
+      *{box-sizing:border-box}
+      body{
+        margin:0; color:var(--text);
+        background:
+          radial-gradient(1200px 800px at 20% -10%, #15214d 5%, transparent 60%),
+          radial-gradient(1000px 700px at 100% 0%, #14224b 10%, transparent 60%),
+          linear-gradient(180deg, var(--bg), #0a1022);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+      }
+      .wrap{max-width:980px;margin:48px auto;padding:0 18px}
+      .topbar{
+        display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+        background:linear-gradient(90deg, rgba(34,211,238,.12), rgba(110,231,183,.12));
+        border:1px solid rgba(255,255,255,.06);
+        padding:18px 20px;border-radius:18px;box-shadow:var(--shadow);backdrop-filter:blur(6px)
+      }
+      .brand{display:flex;align-items:center;gap:12px}
+      .logo{width:42px;height:42px;border-radius:12px;background:radial-gradient(circle at 40% 20%, var(--accent), var(--accent2));box-shadow:inset 0 0 24px rgba(255,255,255,.25), 0 8px 22px rgba(34,211,238,.25)}
+      h1{margin:0;font-size:clamp(22px,3.4vw,32px)}
+      .controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+      label{color:var(--muted);font-size:14px}
+
+      /* pretty select */
+      .select{
+        position:relative;display:inline-block
+      }
+      select{
+        appearance:none;-webkit-appearance:none;
+        background:var(--panel);color:var(--text);
+        border:1px solid rgba(255,255,255,.08);padding:10px 40px 10px 14px;border-radius:12px;
+        outline:none;cursor:pointer
+      }
+      .select:after{
+        content:"▾";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:#b6c3d9;font-size:14px;pointer-events:none
+      }
+
+      .pill{background:rgba(255,255,255,.06);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.08);color:#dbe7ff}
+
+      .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;margin-top:24px;box-shadow:var(--shadow);overflow:hidden}
+      .progress{height:8px;background:rgba(255,255,255,.08);border-top:1px solid rgba(255,255,255,.06)}
+      .bar{height:100%;background:linear-gradient(90deg,var(--accent2),var(--accent));width:calc(({{ (idx+1) if total else 0 }} / {{ total or 1 }})*100%);transition:width .3s ease}
+      .inner{padding:22px}
+      .prompt{font-size:18px;margin:0 0 14px}
+      .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+      input[type=text]{flex:1 1 260px;min-width:220px;max-width:420px;padding:14px 16px;border-radius:12px;background:#0a1127;color:var(--text);border:1px solid rgba(255,255,255,.1);outline:none}
+      input[type=text]:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(34,211,238,.18)}
+      button{border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;transition:transform .06s ease,opacity .2s ease;color:#02131f}
+      .btn{background:linear-gradient(180deg,var(--accent2),#16bdd7)}
+      .btn.secondary{background:linear-gradient(180deg,#99a7c0,#7f8aa3)}
+      .btn.warn{background:linear-gradient(180deg,#f87171,var(--danger));color:#ffecec}
+      button:hover{opacity:.92} button:active{transform:translateY(1px)}
+
+      .feedback{margin-top:12px;font-weight:700}
+      .ok{color:var(--ok)} .bad{color:var(--danger)}
+      .hint{color:#c7e9ff;margin-top:6px}
+
+      .tips{margin-top:12px}
+      .tips h4{margin:0 0 6px;color:var(--muted);font-size:14px}
+      .tips ul{margin:0 0 0 18px;padding:0}
+      .tips li{margin:4px 0}
+      .footer{color:var(--muted);margin-top:14px;font-size:13px}
+      @media (max-width:600px){button{width:100%}.inner{padding:16px}}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo"></div>
+          <h1>Fractions Simplification Tutor</h1>
+        </div>
+
+        <form class="controls" method="get" action="">
+          <label for="level">Skill level</label>
+          <div class="select">
+            <select id="level" name="level" onchange="this.form.submit()">
+              <option value="" {{ 'selected' if not level }}>All</option>
+              {% for lv in levels %}
+                <option value="{{ lv }}" {{ 'selected' if level==lv }}>{{ lv }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          {% if level %}<input type="hidden" name="i" value="0" />{% endif %}
+          <span class="pill">Exercise {{ (idx + 1) if total else 0 }} / {{ total }}</span>
+          {% if tries %}<span class="pill">{{ correct_count }} / {{ tries }}{% if accuracy is not none %} • {{ accuracy }}%{% endif %}</span>{% endif %}
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="progress"><div class="bar"></div></div>
+        <div class="inner">
+          <p class="prompt"><strong>Exercise:</strong> {{ prompt }}</p>
+
+          <form method="POST" class="row" id="answerForm">
+            <input id="answer" name="answer" type="text" value="{{ last_answer or stored_answer or '' }}" placeholder="e.g., 1/2" autofocus />
+            <button type="submit" class="btn">Check</button>
+            <button type="submit" name="nav" value="prev" class="btn secondary">◀ Prev</button>
+            <button type="submit" name="nav" value="next" class="btn secondary">Next ▶</button>
+            <button type="submit" name="nav" value="reset" class="btn warn" title="Reset stats & stored answers">Reset</button>
+          </form>
+
+          {% if feedback %}
+            <div class="feedback {{ 'ok' if correct else 'bad' }}">{{ feedback }}</div>
+          {% endif %}
+          {% if hint %}
+            <div class="hint"><strong>Hint:</strong> {{ hint }}</div>
+          {% endif %}
+
+          {% if not correct and hints and not hint %}
+            <div class="tips">
+              <h4>Try these tips:</h4>
+              <ul>{% for h in hints %}<li>{{ h }}</li>{% endfor %}</ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="footer">Ontology loaded from: {{ owl_path }}</div>
+    </div>
+
+    <script>
+      // Keyboard shortcuts: Enter=Check, ←=Prev, →=Next
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'ArrowLeft') { document.querySelector('button[name="nav"][value="prev"]').click(); e.preventDefault(); }
+        if (e.key === 'ArrowRight'){ document.querySelector('button[name="nav"][value="next"]').click(); e.preventDefault(); }
+      });
+    </script>
+  </body>
+</html>
